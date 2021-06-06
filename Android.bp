@@ -171,6 +171,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "DeviceInfo",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/DeviceInfo/DeviceInfo.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -182,9 +193,31 @@ android_app_import {
 }
 
 android_app_import {
+	name: "atfwd",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/atfwd/atfwd.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "datastatusnotification",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/datastatusnotification/datastatusnotification.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "embms",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/embms/embms.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -263,9 +296,15 @@ dex_import {
 }
 
 dex_import {
-	name: "QtiTelephonyServicelibrary",
+	name: "tcmclient",
 	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/QtiTelephonyServicelibrary.jar"],
+	jars: ["proprietary/framework/tcmclient.jar"],
+}
+
+dex_import {
+	name: "com.qti.dpmframework",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
 	system_ext_specific: true,
 }
 
@@ -312,9 +351,51 @@ dex_import {
 }
 
 dex_import {
+	name: "com.quicinc.cne.api-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.quicinc.cne.api-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.quicinc.cne.api-V1.1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.quicinc.cne.api-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.quicinc.cne.constants-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.quicinc.cne.constants-V2.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.quicinc.cne.constants-V2.1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "dpmapi",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "embmslibrary",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/embmslibrary.jar"],
 	system_ext_specific: true,
 }
 
@@ -326,6 +407,20 @@ dex_import {
 }
 
 dex_import {
+	name: "qti-telephony-common",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.data.factory-V2.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.data.factory-V2.1-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.1-java.jar"],
@@ -333,9 +428,72 @@ dex_import {
 }
 
 dex_import {
+	name: "vendor.qti.data.slm-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.data.slm-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.cne.internal.api-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.cne.internal.constants-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.cne.internal.server-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.connection-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.connection-V1.1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.dynamicdds-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.iwlan-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.hardware.data.latency-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.qmi-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -375,16 +533,16 @@ dex_import {
 }
 
 dex_import {
-	name: "com.qti.dpmframework",
+	name: "vendor.qti.ims.rcsconfig-V2.0-java",
 	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar"],
 	system_ext_specific: true,
 }
 
 dex_import {
-	name: "qti-telephony-common",
+	name: "vendor.qti.ims.rcsconfig-V2.1-java",
 	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar"],
 	system_ext_specific: true,
 }
 
