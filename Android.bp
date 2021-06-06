@@ -6,26 +6,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-	name: "libgpustats",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libgpustats.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libgpustats.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsdm-disp-vndapis",
 	owner: "xiaomi",
 	strip: {
@@ -274,6 +254,12 @@ dex_import {
 	name: "WfdCommon",
 	owner: "xiaomi",
 	jars: ["proprietary/framework/WfdCommon.jar"],
+}
+
+dex_import {
+	name: "audiosphere",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/audiosphere.jar"],
 }
 
 dex_import {
