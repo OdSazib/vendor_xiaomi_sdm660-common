@@ -908,3 +908,9 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.2-service.widevine \
     vendor.qti.gnss@4.0-service \
     chargeonlymode
+
+ifeq ($(BOARD_HAVE_IR),true)
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/lib64/hw/consumerir.lirc.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.lirc.sdm660.so \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/lib64/hw/consumerir.spi.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.spi.sdm660.so
+endif
