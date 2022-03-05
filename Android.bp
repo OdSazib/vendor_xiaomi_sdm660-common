@@ -277,6 +277,12 @@ dex_import {
 }
 
 dex_import {
+	name: "audiosphere",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/audiosphere.jar"],
+}
+
+dex_import {
 	name: "QtiTelephonyServicelibrary",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/QtiTelephonyServicelibrary.jar"],
@@ -433,6 +439,10 @@ cc_prebuilt_binary {
 	name: "chargeonlymode",
 	owner: "xiaomi",
 	srcs: ["proprietary/bin/chargeonlymode"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
 	prefer: true,
 }
 
